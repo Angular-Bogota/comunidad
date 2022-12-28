@@ -15,7 +15,20 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@comunidad/shared/config": ["libs/shared/config/src/index.ts"]
+      "@comunidad/shared/auth/data-access": [
+        "libs/shared/auth/data-access/src/index.ts"
+      ],
+      "@comunidad/shared/config": ["libs/shared/config/src/index.ts"],
+      "@comunidad/website/homepage/feature": [
+        "libs/website/homepage/feature/src/index.ts"
+      ],
+      "@comunidad/website/homepage/ui": [
+        "libs/website/homepage/ui/src/index.ts"
+      ],
+      "@comunidad/website/shell/feature": [
+        "libs/website/shell/feature/src/index.ts"
+      ],
+      "@comunidad/website/shell/ui": ["libs/website/shell/ui/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

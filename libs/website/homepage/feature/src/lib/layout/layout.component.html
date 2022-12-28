@@ -1,0 +1,15 @@
+<div *ngIf="authService.user$ | async as user; else showLogin">
+  <p>Usuario: {{ user.displayName }}</p>
+  <ul>
+    <li *ngFor="let event of events$ | async">
+      {{ event.name }} - {{ event | json }}
+    </li>
+  </ul>
+
+  <button (click)="authService.signOut()">Cerrar Sesión</button>
+</div>
+<ng-template #showLogin>
+  <button (click)="authService.loginWithGoogle()">
+    Iniciar Sesión con Google
+  </button>
+</ng-template>
